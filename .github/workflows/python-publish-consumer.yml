@@ -1,0 +1,17 @@
+name: Upload Python Package
+
+on:
+  workflow_dispatch:
+    inputs:
+      pypi-repository:
+        type: choice
+        options: [pypi, testpypi]
+
+jobs:
+  upload-python-package:
+    uses: diverso-lab/workflows/.github/workflows/python-publish.yml@main
+    with:
+      pypi-repository: ${{ github.event.inputs.pypi-repository }}
+    secrets:
+      pypi-username: ${{ secrets.PYPI_USERNAME }}
+      pypi-password: ${{ secrets.PYPI_PASSWORD}}
