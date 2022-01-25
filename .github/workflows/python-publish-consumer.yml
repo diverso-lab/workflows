@@ -14,4 +14,4 @@ jobs:
       pypi-repository: ${{ github.event.inputs.pypi-repository }}
     secrets:
       pypi-username: ${{ secrets.PYPI_USERNAME }}
-      pypi-password: ${{ secrets.PYPI_PASSWORD}}
+      pypi-password: ${{ secrets.PYPI_PASSWORD }}
