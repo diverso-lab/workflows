@@ -6,7 +6,7 @@ name: Upload Python Package
 on:
   workflow_call:
     inputs:
-      pypiRepository:
+      pypi-repository:
         description: 'Pypi repository'
         required: true
         default: testpypi
