@@ -40,4 +40,4 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.pypi-password }}
       run: |
         python setup.py sdist bdist_wheel
-        twine upload --repository ${{ github.event.inputs.pypiRepository }} dist/*
+        twine upload --repository ${{ github.event.inputs.pypi-repository }} dist/*
